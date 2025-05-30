@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelengkapan Komponen Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    a {
+        text-decoration: none;
+        color: aquamarine;
+    }
+
+    header {
+      background-color: #ffffff;
+      color: #1e3c72;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 20px auto;
+      width: 95%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    th, td {
+      padding: 14px;
+      border: 1px solid #ccc;
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .check {
+      width: 25px;
+      height: 25px;
+    }
+
+    button {
+      padding: 14px 24px;
+      margin: 20px 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffffff;
+      color: #1e3c72;
+      font-weight: bold;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+    }
+
+    button:hover {
+      background-color: #ccc;
+      transform: scale(1.05);
+    }
+
+    .button-container {
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      font-size: 1em;
+    }
+
+    .game-box {
+      margin-top: 10px;
+      background-color: rgba(255,255,255,0.2);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .game-box input[type="number"] {
+      width: 80%;
+      max-width: 300px;
+      padding: 10px;
+      font-size: 1em;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .game-box button {
+      margin-top: 10px;
+      font-size: 1em;
+    }
+
+    pre {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      th, td {
+        font-size: 0.95em;
+        padding: 10px;
+        
+      }
+
+      .check {
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+      }
+
+      button {
+        font-size: 1em;
+        padding: 10px 16px;
+        margin: 10px 6px;
+      }
+
+      .game-box input[type="number"] {
+        width: 90%;
+        font-size: 0.95em;
+      }
+
+      .game-box button {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kelengkapan Komponen Website</h1>
+    <p>Silahkan dipakai untuk melakukan pengecekan komponen website kalian</p>
+  </header>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Komponen</th>
+          <th>Checklist</th>
+        </tr>
+      </thead>
+      <tbody id="checklist-body">
+        <tr><td>1</td><td>Favicon<br><pre>&lt;link rel="icon" type="image/x-icon" href="nama_file.png"&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>2</td><td>Carousel/Slider</td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>3</td><td>Navbar & Footer</td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>4</td><td>Img & Paragraph<br><pre>&lt;img src="gambar.jpg" alt="Gambar"&gt;
+&lt;p&gt;Ini paragraf.&lt;/p&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>5</td><td>Padding/Margin</td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>6</td><td>Div/Flex/Grid</td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>7</td><td>Tabel<br><pre>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Judul&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>8</td><td>List<br><pre>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+&lt;/ul&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>9</td><td>Link<br><pre>&lt;a href="https://example.com"&gt;Klik di sini&lt;/a&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>10</td><td>Iframe<br><pre>&lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>11</td><td>Form & Fieldset<br><pre>&lt;form&gt;
+  &lt;fieldset&gt;&lt;legend&gt;Info&lt;/legend&gt;&lt;/fieldset&gt;
+&lt;/form&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>12</td><td>Radio button<br><pre>&lt;input type="radio" name="gender" value="male"&gt; Laki-laki</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>13</td><td>Dropdown<br><pre>&lt;select&gt;&lt;option&gt;Pilih&lt;/option&gt;&lt;/select&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>14</td><td>Checkbox<br><pre>&lt;input type="checkbox" name="agree"&gt; Setuju</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>15</td><td>Label & Input<br><pre>&lt;label&gt;Nama:&lt;/label&gt;&lt;input type="text"&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>16</td><td>Text area<br><pre>&lt;textarea&gt;Tulis di sini&lt;/textarea&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>17</td><td>Button<br><pre>&lt;button&gt;Klik Saya&lt;/button&gt;</pre></td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>18</td><td>Aspek keseluruhan (Mix)</td><td><input type="checkbox" class="check"></td></tr>
+        <tr><td>19</td><td>Kesesuaian Laporan: <a href="https://docs.google.com/document/d/1qrUMA8acobCk5wMHBH4JwDi_Xz5Ufv-YFHL7hPXpStg/edit?usp=sharing">Lihat Template Laporan</a></td><td><input type="checkbox" class="check"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="button-container">
+    <button onclick="checkAll()">Checklist All</button>
+    <button onclick="resetAll()">Reset</button>
+  </div>
+
+  <footer>
+    <div class="game-box">
+      <p><strong>Mini Game: Tebak Angka (1-10)</strong></p>
+      <p id="game-message">Klik tombol di bawah untuk mulai menebak angka!</p>
+      <input type="number" id="guessInput" placeholder="Masukkan angka 1-10" min="1" max="10">
+      <br>
+      <button onclick="playGame()">Tebak!</button>
+    </div>
+  
+  </footer>
+
+  <script>
+    function checkAll() {
+      document.querySelectorAll(".check").forEach(cb => cb.checked = true);
+    }
+
+    function resetAll() {
+      document.querySelectorAll(".check").forEach(cb => cb.checked = false);
+    }
+
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    function playGame() {
+      const userGuess = parseInt(document.getElementById("guessInput").value);
+      const message = document.getElementById("game-message");
+      if (userGuess === randomNumber) {
+        message.textContent = "🎉 Selamat! Tebakan kamu benar!";
+      } else {
+        message.textContent = "😅 Salah tebak. Coba lagi!";
+      }
+    }
+  </script>
+</body>
+</html>
